@@ -1,5 +1,5 @@
 defaults:
-  - environment: docker
+  - environment: grogu
   - hydra: default
   - data@trainsets: [hoi4d_train]
   - data@testsets: [hoi4d_test]
@@ -9,9 +9,9 @@ defaults:
 worker: models.base
 
 # directory params
+output: ${environment.output} # /ws-judyye/result/
+datadir_prefix: ${environment.data}
 expname: dev/tmp
-datadir_prefix: /ws-judyye/data
-output: /ws-judyye/result/
 checkpoints_dir: ${output}/${expname}
 outputs_dir: ${checkpoints_dir}/log
 exp_dir: ${checkpoints_dir}
@@ -73,3 +73,4 @@ test_guidance_scale: 0
 sample_respacing: '100'
 
 seed: 123
+overwrite: False
