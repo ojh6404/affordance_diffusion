@@ -1,0 +1,15 @@
+imageio
+opencv-python
+scikit-image
+requests
+pandas
+einops
+wandb
+regex
+torch>=2.3.1
+torchvision>=0.18.1
+lightning>=2.3.1
+git+https://github.com/ojh6404/chumpy.git@patch-python3.11
+git+https://github.com/hassony2/manopth.git
+git+https://github.com/facebookresearch/detectron2.git
+git+https://github.com/facebookresearch/pytorch3d.git

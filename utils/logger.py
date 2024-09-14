@@ -11,8 +11,8 @@ from pytorch_lightning import Callback
 import wandb
 import torchvision.utils as vutils
 from pytorch_lightning.loggers import WandbLogger
-from pytorch_lightning.loggers.base import LightningLoggerBase
-from pytorch_lightning.utilities.logger import _add_prefix
+from pytorch_lightning.loggers import Logger
+from lightning.fabric.utilities.logger import _add_prefix
 from pytorch_lightning.utilities.rank_zero import rank_zero_only
 
 
@@ -26,7 +26,7 @@ class LoggerCallback(Callback):
         else:
             logging.info('no commit avaialbe')
 
-class LFSLogger(LightningLoggerBase):
+class LFSLogger(Logger):
     """
     local system logger
     """
